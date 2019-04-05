@@ -57,14 +57,17 @@ addSmurf = smurfs => {
     return (
       <div className="App">
       <div className='nav-bar'>
-      <NavLink className='smurf-nav' exact to='/'>Smurfs</NavLink>
-      <NavLink className='form-nav' exact to='/smurf-form/:id'>Smurf Form</NavLink>
+      <NavLink className='link-one' exact to='/'>Smurfs</NavLink>
+      <NavLink className='link-two' exact to='/smurf-form/:id'>Smurf Form</NavLink>
       </div>
-      <Route path='/' render={ () => 
-      <Smurfs smurfs={this.state.smurfs} /> }       
+      <Route
+        path='/' exact
+        render={ () => <Smurfs 
+        smurfs={this.state.smurfs} /> }       
         />
-        <Route  path='/smurf-form/:id' render={ () => 
-        <SmurfForm addSmurf={this.addSmurf} /> }  
+        <Route  
+        path='/smurf-form/:id'
+         render={ () => <SmurfForm addSmurf={this.addSmurf} /> }  
         />
         
       </div>
