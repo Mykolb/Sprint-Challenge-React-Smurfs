@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 //turned my state into an onject called smuf b/c it is easier for me to deal with
 class SmurfForm extends Component {
   constructor(props) {
@@ -15,8 +16,8 @@ class SmurfForm extends Component {
 
   //changed name of handler b/c add Smurf is the name of my post request 
   //changed event.default ot event.persist b/c I'm using functional setState
-  smurfChangeHandler = event => {
-    console.log('smurf handler is working')
+  changeHandler = event => {
+    console.log('smurf handler is working');
     event.persist();
     // add code to create the smurf using the api
     let value = event.target.value;
@@ -34,7 +35,7 @@ class SmurfForm extends Component {
 //invoke addSmurf using function from post request and the smurf state from above 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addSmurf(this.state.smurf)
+    this.props.addSmurf(this.state.smurfs);
 
       this.setState({
         smurf: {
@@ -43,7 +44,7 @@ class SmurfForm extends Component {
           height: ''
         }
       })
-  }
+  };
 
 
 
@@ -52,7 +53,7 @@ class SmurfForm extends Component {
   render() {
     return (
       <div className="SmurfForm">
-        <form onSubmit={this.smurfChangeHandler}>
+        <form onSubmit={this.changeHandler}>
           <input
             onChange={this.handleSubmit}
             placeholder="name"
