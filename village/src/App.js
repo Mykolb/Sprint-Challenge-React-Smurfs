@@ -57,10 +57,10 @@ addSmurf = smurfs => {
     return (
       <div className="App">
       <div className='nav-bar'>
-      <NavLink className='smurf-nav'>Smurfs</NavLink>
-      <NavLink className='form-nav'>Smurf Form</NavLink>
+      <NavLink className='smurf-nav' to='/'>Smurfs</NavLink>
+      <NavLink className='form-nav' to='/smurf-form/:id'>Smurf Form</NavLink>
       </div>
-        <SmurfForm smurfform={this.addSmurf} />
+        <SmurfForm addSmurf={this.addSmurf} />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
