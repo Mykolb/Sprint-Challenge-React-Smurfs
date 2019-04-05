@@ -15,20 +15,36 @@
   margin-left: 3%;
 }
 
+
+
+.smurf-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+margin: 3% 3% 2% 3%;
+width: 300px;
+height: 200px;
+box-shadow: 10px 20px 10px gray;
+}
+
+
 h1 {
  color: blue;
+ margin-top: 2%;
 
 }
 
-h3 {
-  color: blue;
+.delete-btn {
+  width: 30%;
+  padding-top: 1%;
+  margin-left: 35%;
 }
 
-p {
-  color: black;
-
-}
-
-strong {
-  color: black;
+.edit-btn {
+  width: 30%;
+  padding-top: 1%;
+  margin-left: 35%;
+  margin-top: 2%;
 }
