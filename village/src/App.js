@@ -16,6 +16,8 @@ class App extends Component {
 
 
   //GET REQUEST 
+  //request gets data from server
+  //need server url & endpoint 
 componentDidMount() {
   console.log('Get Req is working');
 axios.get('http://localhost:3333/smurfs')
@@ -27,8 +29,19 @@ axios.get('http://localhost:3333/smurfs')
 })
 }
 
-
-
+//POST REQUEST 
+//saying go to server and get all the smurfs
+//endpoint needs to match what's passed in 
+addSmurf = smurfs => {
+  console.log('Post req is working');
+  axios.post('http://localhost:3333/smurfs', smurfs)
+  .then(response => {
+    this.setState({smurfs: response.data})
+  })
+  .catch(error => {
+    console.log('Post req messed up')
+  })
+}
 
 
 
