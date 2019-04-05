@@ -7,7 +7,7 @@ const Smurf = props => {
   return (
     <div className="smurf-card">
     <Card  className='card'>
-      <CardText>{props.name}</CardText>
+      <CardTitle>{props.name}</CardTitle>
       <CardText><strong>{props.height} tall</strong></CardText>
       <CardText>{props.age} smurf years old</CardText>
       <Button outline color='danger' size='sm' className='delete-btn'>Delete</Button>
